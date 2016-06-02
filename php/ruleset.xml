@@ -17,7 +17,9 @@
     <rule ref="Generic.PHP.LowerCaseConstant"/>
 
     <!-- When present, there MUST be one blank line after the namespace declaration. -->
-    <rule ref="PSR2.Namespaces.NamespaceDeclaration"/>
+    <rule ref="PSR2.Namespaces.NamespaceDeclaration">
+        <exclude-pattern>*/tests/*</exclude-pattern>
+    </rule>
 
     <!-- When present, all use declarations MUST go after the namespace declaration.
     There MUST be one use keyword per declaration.
