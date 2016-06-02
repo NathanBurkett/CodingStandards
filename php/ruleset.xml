@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<ruleset name="MyStandard">
+    <description>PHP CodeSniffer</description>
+
+    <!-- Follow PSR2 standards -->
+    <rule ref="PSR2" />
+
+    <!-- Allow spacing after commas in function arguments -->
+    <rule ref="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Arrays must be declared in shorthand notation -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+
+    <!-- The PHP constants true, false, and null MUST be in lower case. -->
+    <rule ref="Generic.PHP.LowerCaseConstant"/>
+
+    <!-- When present, there MUST be one blank line after the namespace declaration. -->
+    <rule ref="PSR2.Namespaces.NamespaceDeclaration"/>
+
+    <!-- When present, all use declarations MUST go after the namespace declaration.
+    There MUST be one use keyword per declaration.
+    There MUST be one blank line after the use block. -->
+    <rule ref="PSR2.Namespaces.UseDeclaration"/>
+
+    <!-- Class names MUST be declared in StudlyCaps. -->
+    <rule ref="Squiz.Classes.ValidClassName"/>
+
+    <!-- Variables MUST be declared in CamelCase -->
+    <rule ref="Squiz.NamingConventions.ValidVariableName.NotSnakeCase"/>
+
+    <!-- Visibility MUST be declared on all properties.
+    The var keyword MUST NOT be used to declare a property.
+    There MUST NOT be more than one property declared per statement.
+    Property names SHOULD NOT be prefixed with a single underscore to indicate protected or private visibility. -->
+    <rule ref="PSR2.Classes.PropertyDeclaration"/>
+
+    <!-- Visibility MUST be declared on all methods. -->
+    <rule ref="Squiz.Scope.MethodScope"/>
+    <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
+
+    <!-- Method arguments with default values MUST go at the end of the argument list. -->
+    <rule ref="PEAR.Functions.ValidDefaultValue"/>
+
+    <!-- Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting. -->
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+            <property name="ignoreIndentationTokens" type="array" value="T_COMMENT,T_DOC_COMMENT"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+</ruleset>
